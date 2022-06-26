@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import spinner from "../layout/Spinner";
+import Spinner from "../layout/Spinner";
 
 function UserResults() {
   const [users, setUsers] = useState([]);
@@ -29,7 +29,7 @@ function UserResults() {
         </div>
       );
   } else{
-    return <spinner/>
+    return <Spinner/>
   }
  
 }
