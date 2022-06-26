@@ -1,12 +1,15 @@
 import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
+import { GithubProvider } from "./context/github/GithubContext";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
+
 function App() {
   return (
+    <GithubProvider>
     <Router>
       <div className="flex flex-col justify-between h-screen">
         <Navbar />
@@ -21,6 +24,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </GithubProvider>
   );
 }
 // /* to catch navigate to any not found page
